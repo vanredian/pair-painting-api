@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="createName">Name</label>
+            <input type="text" id="createName" placeholder="Enter your name">
+            <button id="createRoomButton">Create Room</button>
+        </div>
+
+        <div id="roomInfo">
+            <p>Room created successfully!</p>
+            <p>Share this UID with others to join: <span id="roomUID"></span></p>
+        </div>
+
+        <button id="showJoinRoomFormButton">Join Existing Room</button>
+
+        <div class="form-group" id="joinRoomForm">
+            <label for="joinName">Name</label>
+            <input type="text" id="joinName" placeholder="Enter your name">
+            <label for="uid">UID</label>
+            <input type="text" id="uid" placeholder="Enter UID">
+            <button id="joinRoomButton">Join Room</button>
+        </div>
+
+        <div id="errorMessage">Error: Room not found</div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
