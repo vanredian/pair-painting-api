@@ -9,7 +9,7 @@ document.getElementById('createRoomButton').addEventListener('click', async () =
     const data = { name };
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/join-or-create-room', {
+        const response = await fetch('http://127.0.0.1:8000/create-room', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

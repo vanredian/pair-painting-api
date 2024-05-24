@@ -37,8 +37,12 @@ class Room(BaseModel):
 # Хранилище комнат
 rooms: Dict[UUID, Room] = {}
 
-@app.post("/join-or-create-room")
-async def join_or_create_room(request: RoomCreateRequest):
+@app.get("/")
+async def index():
+    return {"massage": "Wellcome to Site!"}
+
+@app.post("/create-room")
+async def create_room(request: RoomCreateRequest):
     room_uid = uuid4()
     new_room = Room(uid=room_uid, participants=[request.name])
     rooms[room_uid] = new_room
